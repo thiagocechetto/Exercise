@@ -13,10 +13,6 @@ public class Deal {
     public int max_price;
     public List<String> next_appointment_times;
     public Location location;
-
-    public class Location {
-        String lat;
-        String lon;
-    }
-
+    public boolean instant_confirmation;
+    public boolean on_sale;
 }

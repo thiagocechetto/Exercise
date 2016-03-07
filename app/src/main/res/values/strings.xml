@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Exercise</string>
+    <string name="price_range">$%1$s - $%2$s</string>
+    <string name="next_appt">Next appt %1$s</string>
+    <string name="miles_away">%1$.1f mi away</string>
+
 </resources>

@@ -1,3 +1,9 @@
+.gradle/
+.gradle/*
+.idea/
+.idea/*
+build/
+build/*
 .gradle/2.10/taskArtifacts/cache.properties
 .gradle/2.10/taskArtifacts/cache.properties.lock
 .gradle/2.10/taskArtifacts/fileHashes.bin
@@ -29,3 +35,7 @@
 Exercise.iml
 local.properties
 build/generated/mockable-android-23.jar
+.idea/libraries/butterknife_7_0_1.xml
+.idea/libraries/design_23_1_1.xml
+.idea/libraries/glide_3_7_0.xml
+.idea/libraries/recyclerview_v7_23_1_1.xml

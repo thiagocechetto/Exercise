@@ -3,6 +3,8 @@ package com.mytime.exercise;
 import android.util.Log;
 
 import com.mytime.exercise.network.pojo.Deal;
+import com.mytime.exercise.transformer.DealTransformer;
+import com.mytime.exercise.viewmodel.DealViewModel;
 
 import java.util.List;
 
@@ -21,6 +23,7 @@ public class SearchPresenter {
 
     private MyTimeService myTimeService;
     private SearchView view;
+    private DealTransformer transformer;
 
     public SearchPresenter(SearchView view) {
         this.view = view;
@@ -30,12 +33,13 @@ public class SearchPresenter {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .baseUrl(MyTimeService.BASE_URL)
                 .build();
-
         myTimeService = retrofit.create(MyTimeService.class);
+
+        transformer = new DealTransformer(view.getContext());
     }
 
     public void retrieveDeals() {
-        myTimeService.getDeals("Massage", "Anytime", "34.052200,-118.242800")
+        myTimeService.getDeals("Massage", "Anytime", LATITUDE + "," + LONGITUDE)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<Deal>>() {
@@ -51,9 +55,9 @@ public class SearchPresenter {
 
                     @Override
                     public void onNext(List<Deal> deals) {
-                        Deal d = deals.get(0);
+                        DealAdapter dealAdapter = new DealAdapter(transformer.transformToViewModel(deals));
+                        view.setDealAdapter(dealAdapter);
                     }
                 });
-
     }
 }
