@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_463c2717108ccd014cf36e481aae298b6b1baea4.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/okhttp-3.0.1_e2bf09e04b0f2d8d49eabbae189708cb7a1934d2.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.0-beta4/bd49baf667542c7d06f71e598bdee7fe57272013/adapter-rxjava-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bd49baf667542c7d06f71e598bdee7fe57272013">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.0-beta4_1a6a485fae0e182fd48817387c9402cb20551dce.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.0/748f0546d5c3c27f1aef07270ffea0c45f0c42a4/rxjava-1.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="748f0546d5c3c27f1aef07270ffea0c45f0c42a4">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/rxjava-1.1.0_fbedcfce344f68995c38053f2a1c99d66f1ad04c.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.1.0_9441a495aca9fc5f594da7094c27fffce0769c58.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/okio-1.6.0_9351f1ed0b2a9404a59996f383ceee0ee9d76179.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/gson-2.6.1_aa10b312c7179b3f46b319573b0318bcfeaf3e4c.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_d413db349ede1f63965af103d344767df0ba775c.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_35958b5080f007698b36060ecb6a58620ec3e170.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/de5935a367ba5e343e9df786ac8fc0c7d52b5f0c/converter-gson-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta4_a4c413f7ef321c65ae87f5d1c13f057f0c4749b5.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_b602ebdc06665bc679b32c1e45975bc637d54d22.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_b683a86b5f9563042db0b971d211161c514f5675.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/Exercise/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_a21dc1418afeefe4c8db78ae4c842b86bf67fb2d.jar" />
+    </item>
+    <item
+        jar="/Users/thiagocechetto/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.0-beta4/739e00dea1f0ac04fdb9b6160d667e23cc50a791/retrofit-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="/Users/thiagocechetto/Exercise/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta4_fa8ba3f408ea4753585d3d500e42ed79c8f86c16.jar" />
+    </item>
+
+</items>
