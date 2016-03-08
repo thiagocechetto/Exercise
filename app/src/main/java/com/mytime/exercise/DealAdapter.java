@@ -69,8 +69,16 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         holder.merchantName.setText(deal.getName());
         holder.serviceName.setText(deal.getType());
         holder.distance.setText(deal.getDistance());
-        holder.nextAppt.setText(deal.getNextAppt());
         holder.priceRange.setText(deal.getPriceRange());
+
+        holder.nextAppt.setText(deal.getNextAppt());
+        if (deal.isShowInstantConfirmationIcon()) {
+            holder.nextAppt.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_lightning_small, 0, 0, 0);
+        } else {
+            holder.nextAppt.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+        }
+
+        holder.saleIcon.setVisibility(deal.isShowOnSaleIcon() ? View.VISIBLE : View.GONE);
 
     }
 
@@ -101,6 +109,9 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
 
         @Bind(R.id.next_appt)
         TextView nextAppt;
+
+        @Bind(R.id.sale_icon)
+        ImageView saleIcon;
 
         @Bind(R.id.price_range)
         TextView priceRange;
