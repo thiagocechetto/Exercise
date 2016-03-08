@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="-1dp"
+    android:layout_marginLeft="-0.5dp"
     android:layout_weight="1"
     android:background="@drawable/shape_button"
     android:gravity="center"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/map_icon" />
 
-    <TextView
+    <com.mytime.exercise.view.MuseoSans300TextView
         style="@style/list_clickable_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

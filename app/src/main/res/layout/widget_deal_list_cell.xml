@@ -5,7 +5,7 @@
     android:layout_margin="5dp"
     android:background="@drawable/shape_list"
     android:orientation="horizontal"
-    android:paddingBottom="15dp">
+    android:paddingBottom="10dp">
 
 
     <ImageView
@@ -26,9 +26,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/dealer_photo"
-        android:layout_marginBottom="@dimen/list_default_margin"
         android:layout_marginLeft="@dimen/list_default_margin"
-        android:layout_marginTop="@dimen/list_default_margin"
         android:orientation="horizontal">
 
         <ImageView
@@ -42,6 +40,7 @@
             android:id="@+id/yelp_logo"
             android:layout_width="30dp"
             android:layout_height="18dp"
+            android:layout_marginLeft="@dimen/list_default_margin"
             android:layout_toRightOf="@id/yelp_rating"
             android:scaleType="centerInside" />
 
@@ -56,7 +55,8 @@
         android:layout_alignLeft="@+id/price_container"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/list_default_margin">
 
         <TextView
             android:id="@+id/merchant_name"
@@ -87,11 +87,12 @@
 
 
     </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/info_container"
-            android:background="@color/dividers"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_below="@id/info_container"
+        android:background="@color/dividers" />
 
     <LinearLayout
         android:id="@+id/price_container"
@@ -100,7 +101,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@id/yelp_container"
-        android:layout_margin="@dimen/list_default_margin"
+        android:layout_marginTop="5dp"
         android:layout_toRightOf="@id/yelp_container"
         android:gravity="right|center_vertical"
         android:orientation="horizontal">

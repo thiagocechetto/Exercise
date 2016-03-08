@@ -21,7 +21,7 @@
     </style>
 
     <style name="price_text" parent="list_title">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>
