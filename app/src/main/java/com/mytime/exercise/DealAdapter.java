@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.makeramen.roundedimageview.Corner;
 import com.makeramen.roundedimageview.RoundedTransformationBuilder;
-import com.mytime.exercise.network.pojo.Deal;
 import com.mytime.exercise.viewmodel.DealViewModel;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -63,7 +62,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
                     .load(YELP_LOGO_URL)
                     .into(holder.yelpLogo);
         }
-        
+
         holder.merchantName.setText(deal.getName());
         holder.serviceName.setText(deal.getType());
         holder.distance.setText(deal.getDistance());

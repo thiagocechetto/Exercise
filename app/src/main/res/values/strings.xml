@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Exercise</string>
+    <string name="activity_title">Search</string>
+
     <string name="price_range">$%1$s - $%2$s</string>
     <string name="next_appt">Next appt %1$s</string>
     <string name="miles_away">%1$.1f mi away</string>
+    <string name="search_hint">Search for a business or service</string>
+
+    <string name="filter">Filter</string>
+    <string name="map">Map</string>
 
 </resources>
