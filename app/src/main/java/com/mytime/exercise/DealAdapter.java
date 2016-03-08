@@ -70,6 +70,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         holder.serviceName.setText(deal.getType());
         holder.distance.setText(deal.getDistance());
         holder.nextAppt.setText(deal.getNextAppt());
+        holder.priceRange.setText(deal.getPriceRange());
 
     }
 
@@ -100,6 +101,9 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
 
         @Bind(R.id.next_appt)
         TextView nextAppt;
+
+        @Bind(R.id.price_range)
+        TextView priceRange;
 
         public DealViewHolder(View itemView) {
             super(itemView);
