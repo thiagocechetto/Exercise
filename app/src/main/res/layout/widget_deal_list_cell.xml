@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="@drawable/shape_list"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:paddingBottom="15dp">
 
 
     <ImageView
@@ -15,6 +16,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/yelp_container"
+        android:paddingRight="@dimen/list_default_margin"
         android:scaleType="fitXY" />
 
     <RelativeLayout
@@ -27,7 +29,6 @@
         android:layout_marginBottom="@dimen/list_default_margin"
         android:layout_marginLeft="@dimen/list_default_margin"
         android:layout_marginTop="@dimen/list_default_margin"
-        android:background="@color/link"
         android:orientation="horizontal">
 
         <ImageView
@@ -42,7 +43,6 @@
             android:layout_width="30dp"
             android:layout_height="18dp"
             android:layout_toRightOf="@id/yelp_rating"
-            android:background="@android:color/holo_purple"
             android:scaleType="centerInside" />
 
 
@@ -56,9 +56,7 @@
         android:layout_alignLeft="@+id/price_container"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@android:color/holo_orange_dark"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/list_default_margin">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/merchant_name"
@@ -87,7 +85,13 @@
             android:drawableLeft="@drawable/icon_lightning_small"
             android:drawablePadding="@dimen/list_default_margin" />
 
+
     </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/info_container"
+            android:background="@color/dividers"/>
 
     <LinearLayout
         android:id="@+id/price_container"
@@ -98,7 +102,6 @@
         android:layout_alignTop="@id/yelp_container"
         android:layout_margin="@dimen/list_default_margin"
         android:layout_toRightOf="@id/yelp_container"
-        android:background="@android:color/holo_blue_bright"
         android:gravity="right|center_vertical"
         android:orientation="horizontal">
 

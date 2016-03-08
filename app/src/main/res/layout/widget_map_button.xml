@@ -5,10 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="-1dp"
     android:layout_weight="1"
-    android:orientation="horizontal"
     android:background="@drawable/shape_button"
     android:gravity="center"
+    android:orientation="horizontal"
     android:padding="13dp"
     android:text="@string/filter"
     tools:showIn="@layout/activity_search">
@@ -19,11 +20,11 @@
         android:src="@drawable/map_icon" />
 
     <TextView
+        style="@style/list_clickable_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/list_clickable_text"
         android:layout_marginLeft="8dp"
-        android:textSize="18sp"
-        android:text="@string/map" />
+        android:text="@string/map"
+        android:textSize="18sp" />
 
 </LinearLayout>
