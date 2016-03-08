@@ -10,8 +10,10 @@ public class DealViewModel {
     private boolean showOnSaleIcon;
     private String priceRange;
     private String yelpRatingUrl;
+    private String photoUrl;
 
-    public DealViewModel(String name, String type, String distance, String nextAppt, boolean showInstantConfirmationIcon, boolean showOnSaleIcon, String priceRange, String yelpRatingUrl) {
+
+    public DealViewModel(String name, String type, String distance, String nextAppt, boolean showInstantConfirmationIcon, boolean showOnSaleIcon, String priceRange, String yelpRatingUrl, String photoUrl) {
         this.name = name;
         this.type = type;
         this.distance = distance;
@@ -20,6 +22,7 @@ public class DealViewModel {
         this.showOnSaleIcon = showOnSaleIcon;
         this.priceRange = priceRange;
         this.yelpRatingUrl = yelpRatingUrl;
+        this.photoUrl = photoUrl;
     }
 
     public String getName() {
@@ -52,5 +55,9 @@ public class DealViewModel {
 
     public String getYelpRatingUrl() {
         return yelpRatingUrl;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
     }
 }

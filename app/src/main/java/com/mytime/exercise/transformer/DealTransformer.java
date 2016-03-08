@@ -18,7 +18,7 @@ public class DealTransformer {
     public static final float ONE_METER_IN_MILES = 0.000621371f;
     public static final String SCREEN_DATE_FORMAT = "MM/dd/yyyy";
     public static final String JSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-    
+
     private Context context;
 
     public DealTransformer(Context context) {
@@ -44,7 +44,8 @@ public class DealTransformer {
                 deal.instant_confirmation,
                 deal.on_sale,
                 formatPriceRange(deal.min_price, deal.max_price),
-                deal.yelp_rating_image_url
+                deal.yelp_rating_image_url,
+                deal.photo_url
         );
     }
 
