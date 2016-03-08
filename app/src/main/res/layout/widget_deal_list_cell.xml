@@ -62,26 +62,30 @@
 
         <TextView
             android:id="@+id/merchant_name"
+            style="@style/list_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.mytime.exercise.view.MuseoSans300TextView
             android:id="@+id/service_name"
+            style="@style/list_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
 
-        <TextView
+        <com.mytime.exercise.view.MuseoSans300TextView
             android:id="@+id/distance"
+            style="@style/list_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.mytime.exercise.view.MuseoSans300TextView
             android:id="@+id/next_appt"
+            style="@style/list_clickable_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_lightning_small"
-            android:drawablePadding="@dimen/list_default_margin"/>
+            android:drawablePadding="@dimen/list_default_margin" />
 
     </LinearLayout>
 
@@ -102,12 +106,13 @@
             android:id="@+id/sale_icon"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:scaleType="centerInside"
             android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
             android:src="@drawable/sale_tag" />
 
         <TextView
             android:id="@+id/price_range"
+            style="@style/price_text"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginRight="@dimen/list_default_margin" />

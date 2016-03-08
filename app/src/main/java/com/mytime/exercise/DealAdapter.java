@@ -63,9 +63,7 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
                     .load(YELP_LOGO_URL)
                     .into(holder.yelpLogo);
         }
-
-
-
+        
         holder.merchantName.setText(deal.getName());
         holder.serviceName.setText(deal.getType());
         holder.distance.setText(deal.getDistance());
