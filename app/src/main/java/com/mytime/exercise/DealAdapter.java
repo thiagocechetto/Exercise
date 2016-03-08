@@ -23,6 +23,8 @@ import butterknife.ButterKnife;
 
 public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder> {
 
+    private static final String YELP_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/1280px-Yelp_Logo.svg.png";
+
     private List<DealViewModel> deals;
 
     public DealAdapter(List<DealViewModel> deals) {
@@ -51,6 +53,18 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
                 .transform(transformation)
                 .into(holder.dealerPhoto);
 
+        if (deal.getYelpRatingUrl() != null && !deal.getYelpRatingUrl().isEmpty()) {
+
+            Picasso.with(holder.yelpRating.getContext())
+                    .load(deal.getYelpRatingUrl())
+                    .into(holder.yelpRating);
+
+            Picasso.with(holder.yelpLogo.getContext())
+                    .load(YELP_LOGO_URL)
+                    .into(holder.yelpLogo);
+        }
+
+
 
         holder.merchantName.setText(deal.getName());
         holder.serviceName.setText(deal.getType());
@@ -68,6 +82,12 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
 
         @Bind(R.id.dealer_photo)
         ImageView dealerPhoto;
+
+        @Bind(R.id.yelp_rating)
+        ImageView yelpRating;
+
+        @Bind(R.id.yelp_logo)
+        ImageView yelpLogo;
 
         @Bind(R.id.merchant_name)
         TextView merchantName;
