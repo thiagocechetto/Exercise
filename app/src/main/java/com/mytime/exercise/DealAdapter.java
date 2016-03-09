@@ -69,11 +69,11 @@ public class DealAdapter extends RecyclerView.Adapter<DealAdapter.DealViewHolder
         holder.priceRange.setText(deal.getPriceRange());
 
         holder.nextAppt.setText(deal.getNextAppt());
-        if (deal.isShowInstantConfirmationIcon()) {
-            holder.nextAppt.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon_lightning_small, 0, 0, 0);
-        } else {
-            holder.nextAppt.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
+        holder.nextAppt.setCompoundDrawablesWithIntrinsicBounds(
+                deal.isShowInstantConfirmationIcon() ? R.drawable.icon_lightning_small : 0,
+                0,
+                0,
+                0);
 
         holder.saleIcon.setVisibility(deal.isShowOnSaleIcon() ? View.VISIBLE : View.GONE);
 

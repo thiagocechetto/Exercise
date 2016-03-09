@@ -69,8 +69,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView, Goo
 
     @Override
     public void onConnected(Bundle bundle) {
-        Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(
-                googleApiClient);
+        Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
         presenter.retrieveDeals(lastLocation);
     }
 
@@ -86,7 +85,6 @@ public class SearchActivity extends AppCompatActivity implements SearchView, Goo
 
     @Override
     public void showMessage(int message) {
-            Snackbar.make(dealList, message, Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+        Snackbar.make(dealList, message, Snackbar.LENGTH_LONG).show();
     }
 }

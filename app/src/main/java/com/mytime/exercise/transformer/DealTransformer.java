@@ -1,10 +1,10 @@
 package com.mytime.exercise.transformer;
 
 import android.content.Context;
-import android.location.Location;
 
 import com.mytime.exercise.R;
 import com.mytime.exercise.network.pojo.Deal;
+import com.mytime.exercise.network.pojo.Location;
 import com.mytime.exercise.viewmodel.DealViewModel;
 
 import java.text.ParseException;
@@ -22,6 +22,8 @@ public class DealTransformer {
     private Context context;
     private double currentLatitude;
     private double currentLongitude;
+    private SimpleDateFormat screenFormat = new SimpleDateFormat(SCREEN_DATE_FORMAT);
+    private SimpleDateFormat jsonFormat = new SimpleDateFormat(JSON_DATE_FORMAT);
 
     public DealTransformer(Context context) {
         this.context = context;
@@ -34,11 +36,11 @@ public class DealTransformer {
 
     public List<DealViewModel> transformToViewModel(List<Deal> deals) {
         List<DealViewModel> dealViewModelList = new ArrayList<DealViewModel>(deals.size());
-        for (Deal deal: deals) {
+        for (Deal deal : deals) {
             DealViewModel dealViewModel = transformToViewModel(deal);
             dealViewModelList.add(dealViewModel);
         }
-        return  dealViewModelList;
+        return dealViewModelList;
     }
 
     DealViewModel transformToViewModel(Deal deal) {
@@ -56,7 +58,7 @@ public class DealTransformer {
         );
     }
 
-    String calculateDistanceFrom(com.mytime.exercise.network.pojo.Location location) {
+    String calculateDistanceFrom(Location location) {
         float[] resultInMeters = new float[3];
         android.location.Location.distanceBetween(
                 currentLatitude,
@@ -73,8 +75,9 @@ public class DealTransformer {
     }
 
     String formatNextAppt(String nextAppointment) {
-        SimpleDateFormat screenFormat = new SimpleDateFormat(SCREEN_DATE_FORMAT);
-        SimpleDateFormat jsonFormat = new SimpleDateFormat(JSON_DATE_FORMAT);
+        if (nextAppointment.isEmpty()) {
+            return "";
+        }
         String result = "";
         try {
             Date date = jsonFormat.parse(nextAppointment);
