@@ -1,10 +1,10 @@
 package com.mytime.exercise.transformer;
 
 import android.content.Context;
+import android.location.Location;
 
 import com.mytime.exercise.R;
 import com.mytime.exercise.network.pojo.Deal;
-import com.mytime.exercise.network.pojo.Location;
 import com.mytime.exercise.viewmodel.DealViewModel;
 
 import java.text.ParseException;
@@ -20,9 +20,16 @@ public class DealTransformer {
     public static final String JSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
 
     private Context context;
+    private double currentLatitude;
+    private double currentLongitude;
 
     public DealTransformer(Context context) {
         this.context = context;
+    }
+
+    public void setCurrentLocation(double latitude, double longitude) {
+        currentLatitude = latitude;
+        currentLongitude = longitude;
     }
 
     public List<DealViewModel> transformToViewModel(List<Deal> deals) {
@@ -49,11 +56,11 @@ public class DealTransformer {
         );
     }
 
-    String calculateDistanceFrom(Location location) {
+    String calculateDistanceFrom(com.mytime.exercise.network.pojo.Location location) {
         float[] resultInMeters = new float[3];
         android.location.Location.distanceBetween(
-                Float.parseFloat("34.052200"),
-                Float.parseFloat("-118.242800"),
+                currentLatitude,
+                currentLongitude,
                 Float.parseFloat(location.lat),
                 Float.parseFloat(location.lon),
                 resultInMeters

@@ -10,4 +10,8 @@
     <string name="filter">Filter</string>
     <string name="map">Map</string>
 
+    <string name="gps_error_message">Failed to get GPS location. Using default location</string>
+    <string name="no_deals_message">Couldn\'t find any deals near your location</string>
+    <string name="error_retrieving_deals_message">Error getting deals</string>
+
 </resources>

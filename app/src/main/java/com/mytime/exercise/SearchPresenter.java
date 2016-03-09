@@ -20,15 +20,14 @@ public class SearchPresenter {
     public static final String WHAT_MASSAGE = "Massage";
     public static final String WHEN_ANYTIME = "Anytime";
 
-    // used for test:
-    public final String LATITUDE = "34.052200";
-    public final String LONGITUDE = "-118.242800";
+    // used when GPS fails:
+    public static final double DEFAULT_LATITUDE = 34.052200;
+    public static final double DEFAULT_LONGITUDE = -118.242800;
 
 
     private MyTimeService myTimeService;
     private SearchView view;
     private DealTransformer transformer;
-    private Location currentLocation;
 
     public SearchPresenter(SearchView view) {
         this.view = view;
@@ -45,8 +44,18 @@ public class SearchPresenter {
     }
 
     public void retrieveDeals(Location location) {
-        transformer.setCurrentLocation(currentLocation);
-        myTimeService.getDeals(WHAT_MASSAGE, WHEN_ANYTIME, location.getLatitude() + "," + location.getLongitude())
+
+        String locationString;
+
+        if (location == null) {
+            transformer.setCurrentLocation(DEFAULT_LATITUDE, DEFAULT_LONGITUDE);
+            view.showMessage(R.string.gps_error_message);
+            locationString = DEFAULT_LATITUDE + "," + DEFAULT_LONGITUDE;
+        } else {
+            transformer.setCurrentLocation(location.getLatitude(), location.getLongitude());
+            locationString = location.getLatitude() + "," + location.getLongitude();
+        }
+        myTimeService.getDeals(WHAT_MASSAGE, WHEN_ANYTIME, locationString)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<Deal>>() {
@@ -57,11 +66,16 @@ public class SearchPresenter {
 
                     @Override
                     public void onError(Throwable e) {
+                        e.printStackTrace();
                         Log.e("SearchPresenter", "getDeals error: " + e.getLocalizedMessage());
+                        view.showMessage(R.string.error_retrieving_deals_message);
                     }
 
                     @Override
                     public void onNext(List<Deal> deals) {
+                        if (deals.isEmpty()) {
+                            view.showMessage(R.string.no_deals_message);
+                        }
                         DealAdapter dealAdapter = new DealAdapter(transformer.transformToViewModel(deals));
                         view.setDealAdapter(dealAdapter);
                     }

@@ -3,6 +3,7 @@ package com.mytime.exercise;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationManager;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -70,7 +71,6 @@ public class SearchActivity extends AppCompatActivity implements SearchView, Goo
     public void onConnected(Bundle bundle) {
         Location lastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 googleApiClient);
-
         presenter.retrieveDeals(lastLocation);
     }
 
@@ -82,5 +82,11 @@ public class SearchActivity extends AppCompatActivity implements SearchView, Goo
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
+    }
+
+    @Override
+    public void showMessage(int message) {
+            Snackbar.make(dealList, message, Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
     }
 }

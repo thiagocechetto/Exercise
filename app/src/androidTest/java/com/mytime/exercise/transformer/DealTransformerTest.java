@@ -10,6 +10,7 @@ public class DealTransformerTest extends AndroidTestCase {
     protected void setUp() throws Exception {
         super.setUp();
         transformer = new DealTransformer(getContext());
+        transformer.setCurrentLocation(34.052200, -118.242800);
     }
 
     public void testFormatNextAppt() {
