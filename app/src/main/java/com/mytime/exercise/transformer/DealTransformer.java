@@ -40,7 +40,7 @@ public class DealTransformer {
                 deal.name,
                 deal.service_name,
                 calculateDistanceFrom(deal.location),
-                formatNextAppt(deal.next_appointment_times.get(0)),
+                formatNextAppt(deal.next_appointment_times[0]),
                 deal.instant_confirmation,
                 deal.on_sale,
                 formatPriceRange(deal.min_price, deal.max_price),

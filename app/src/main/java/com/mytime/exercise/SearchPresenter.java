@@ -1,10 +1,10 @@
 package com.mytime.exercise;
 
+import android.location.Location;
 import android.util.Log;
 
 import com.mytime.exercise.network.pojo.Deal;
 import com.mytime.exercise.transformer.DealTransformer;
-import com.mytime.exercise.viewmodel.DealViewModel;
 
 import java.util.List;
 
@@ -17,13 +17,18 @@ import rx.schedulers.Schedulers;
 
 public class SearchPresenter {
 
-    private final String LATITUDE = "34.052200";
-    private final String LONGITUDE = "-118.242800";
+    public static final String WHAT_MASSAGE = "Massage";
+    public static final String WHEN_ANYTIME = "Anytime";
+
+    // used for test:
+    public final String LATITUDE = "34.052200";
+    public final String LONGITUDE = "-118.242800";
 
 
     private MyTimeService myTimeService;
     private SearchView view;
     private DealTransformer transformer;
+    private Location currentLocation;
 
     public SearchPresenter(SearchView view) {
         this.view = view;
@@ -36,10 +41,12 @@ public class SearchPresenter {
         myTimeService = retrofit.create(MyTimeService.class);
 
         transformer = new DealTransformer(view.getContext());
+
     }
 
-    public void retrieveDeals() {
-        myTimeService.getDeals("Massage", "Anytime", LATITUDE + "," + LONGITUDE)
+    public void retrieveDeals(Location location) {
+        transformer.setCurrentLocation(currentLocation);
+        myTimeService.getDeals(WHAT_MASSAGE, WHEN_ANYTIME, location.getLatitude() + "," + location.getLongitude())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<Deal>>() {
